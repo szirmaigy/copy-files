@@ -1,5 +1,10 @@
 import os, shutil, time
 
+# class CP (self):
+
+    # def dir_set (self):
+    # def time_set (self):
+
 def CP (src, dest, t):
     src_files = os.listdir(src)
     for file_name in src_files:
@@ -8,8 +13,8 @@ def CP (src, dest, t):
             shutil.copy(full_file_name, dest)
             time.sleep(t)
 
-# src = '/home/asura-ubuntu/arutest/image_fold/8'
-# dest = '/home/asura-ubuntu/arutest/image_fold/2'
-# t = 3
+src = '/home/asura-ubuntu/arutest/image_fold/8'
+dest = '/home/asura-ubuntu/arutest/image_fold/1'
+t = 1
 
-# CP(src, dest, t)
+CP(src, dest, t)
