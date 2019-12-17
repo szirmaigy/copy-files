@@ -20,18 +20,22 @@ class App(QWidget):
     def initUI(self):
 
         # Target button
-        button = QPushButton('Source folder', self)
-        button.move(20,20)
-        button.clicked.connect(self.open_dir)
+        self.button = QPushButton('Source folder', self)
+        self.button.move(20,20)
+        self.button.clicked.connect(self.open_dir)
+        # lbl3 = QLabel('test', self)
+        # lbl3.move(150, 23)
+        # self.button1 = QtGui.QFileDialog.getExistingDirectory(self, 'Select directory')
+        # self.button1.move(150, 23)
 
         # Target button
-        button = QPushButton('Target folder', self)
-        button.move(20,50)
-        button.clicked.connect(self.open_dir)
+        self.button = QPushButton('Target folder', self)
+        self.button.move(20,50)
+        self.button.clicked.connect(self.open_dir)
 
         # Time set
-        label = QLabel('Sec', self)
-        label.move(20,83)
+        self.label = QLabel('Sec', self)
+        self.label.move(20,83)
 
         self.textbox = QLineEdit(self)
         self.textbox.move(50, 83)
@@ -52,6 +56,11 @@ class App(QWidget):
         self.dir_name = QFileDialog.getExistingDirectory(self, 'Select Directory')
         if self.dir_name:
             self.btn_file.setText(self.dir_name)
+
+    def getTimer(self):
+        i, okPressed = QInputDialog.getInt(self, "Get time","Percentage:", 28, 0, 100, 1)
+        if okPressed:
+            print(i)
 
 
 if __name__ == '__main__':
