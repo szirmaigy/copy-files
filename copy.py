@@ -1,34 +1,19 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import os, shutil, time
 
-# class CP:
-#     def FindFiles(self, src):
-#         self.src = src
-#
-#         src_files = os.listdir(self.src)
-#         for file_name in src_files:
-#             full_file_name = os.path.join(self.src, file_name)
-#             return full_file_name
-#
-#     def CopyFiles(self, dest, t):
-#         self.dest = dest
-#         self.t = t
-#
-#         if os.path.isfile(full_file_name):
-#             shutil.copy(full_file_name, self.dest)
-#             time.sleep(self.t)
+class CP:
+    def CopyFiles(self, src, dest, timeset=1):
+        # self.src = src
+        # self.dest = dest
+        # self.timeset = timeset
 
-def CP (src, dest, t):
-    src_files = os.listdir(src)
-    for file_name in src_files:
-        full_file_name = os.path.join(src, file_name)
-        if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, dest)
-            time.sleep(t)
+        src_files = os.listdir(src)
+        for file_name in src_files:
+            full_file_name = os.path.join(src, file_name)
+            if os.path.isfile(full_file_name):
+                shutil.copy(full_file_name, dest)
+                time.sleep(timeset)
 
-# src = '/home/asura-ubuntu/arutest/image_fold/3'
-# dest = '/home/asura-ubuntu/arutest/image_fold/1'
-# t = 1
-
-# CP.FindFiles(src)
-# CP.CopyFiles(dest,t)
-# CP(src, dest, t)
+# CP.CopyFiles('/home/asura-ubuntu/arutest/image_fold/8','/home/asura-ubuntu/arutest/image_fold/3',1)
