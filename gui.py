@@ -54,7 +54,7 @@ class App(QWidget):
 
         # Time set
         self.label = QLabel('Sec', self)
-        self.label.move(20,83)
+        self.label.move(20,84)
 
         self.timelabel = QSpinBox(self)
         self.timelabel.move(50, 83)
